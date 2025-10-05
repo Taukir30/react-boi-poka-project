@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 const Root = () => {
     return (
         <div className='workSans'>
-            <div className='w-[95%] mx-auto'>
+            <div className='w-[85%] mx-auto'>
                 <Header></Header>
                 <Outlet></Outlet>
             </div>

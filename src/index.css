@@ -11,3 +11,11 @@
 .playFair{
   font-family: "Playfair Display", serif;
 }
+
+ul li .active{
+  color: #23BE0A;
+  font-weight: bold;
+  border: 1px solid #23BE0A;
+  border-radius: 8px;
+  padding: 8px 15px;
+}

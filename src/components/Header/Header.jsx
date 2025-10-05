@@ -1,14 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Header = () => {
 
     const menuItems = <>
-                        <li><a>Item 1</a></li>                        
-                        <li><a>Item 3</a></li>
+                        <li><NavLink to="/">Home</NavLink></li>                        
+                        <li><NavLink to="/app">Listed Books</NavLink></li>
+                        <li><NavLink to="/app">Pages to Read</NavLink></li>
                     </>
 
     return (
-        <div className=''>
+        <div className='py-5'>
             <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -19,15 +21,16 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <a className="font-bold text-2xl">Book Vibe</a>
+                    <a className="hidden md:block font-bold text-2xl">Book Vibe</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 items-center gap-3 tracking-wide text-base">
                         {menuItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end gap-3">
+                    <button className="btn bg-[#23BE0A] rounded-md p-6 text-white workSans tracking-wide shadow-none">Sign In</button>
+                    <button className="btn bg-[#59C6D2] rounded-md p-6 text-white workSans tracking-wide shadow-none">Sign Up</button>
                 </div>
             </div>
         </div>
