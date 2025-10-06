@@ -37,6 +37,7 @@ const ListedBooks = () => {
 
                 <TabPanel>
                     <div className='flex flex-col gap-2'>
+                        <h2 className={`text-center my-5 font-bold ${readBooks.length===0? "block" : "hidden"}`}>No book in Readlist</h2>
                         {
                             readBooks.map( readBook => <ReadCard key={readBook.bookId} readBook={readBook}></ReadCard> )
                         }
@@ -45,6 +46,7 @@ const ListedBooks = () => {
 
                 <TabPanel>
                     <div className='flex flex-col gap-2'>
+                        <h2 className={`text-center my-5 font-bold ${wishBooks.length===0? "block" : "hidden"}`}>No book in Wishlist</h2>
                         {
                             wishBooks.map( wishBook => <WishCard key={wishBook.bookId} wishBook={wishBook} wishBooks={wishBooks} setWishBooks={setWishBooks}></WishCard> )
                         }
