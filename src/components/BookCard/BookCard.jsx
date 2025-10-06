@@ -1,12 +1,13 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import { Link } from 'react-router';
 
 const BookCard = ({ book }) => {
 
     console.log(book)
 
     return (
-        <div>
+        <Link to={`/book/${book.bookId}`}>
             <div className="card min-h-[455px] bg-base-100 w-full shadow-xs border border-gray-200 rounded-xl">
                 <figure className='m-5 rounded-xl h-[200px] bg-[#F3F3F3]'>
                     <img className=' h-[160px]' src={book.image}
@@ -17,8 +18,6 @@ const BookCard = ({ book }) => {
                         {
                             book.tags.map( (tag, index) => <div key={index} className="badge badge-soft badge-success rounded-2xl text-[#23BE0A]">{tag}</div> )
                         }
-                        {/* <div className="badge badge-soft badge-success rounded-2xl text-[#23BE0A]">Young Adult</div>
-                        <div className="badge badge-soft badge-success rounded-2xl text-[#23BE0A]">Identity</div> */}
                     </div>
                     <h2 className="card-title playFair text-xl my-2">
                         {book.bookName}
@@ -30,7 +29,7 @@ const BookCard = ({ book }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
